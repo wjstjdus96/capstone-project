@@ -48,6 +48,7 @@
                 <div class="row">
                   <form name="urlId" method="get" action="/tubeana/board">
                     <div class="col-xl-auto">
+                      {% csrf_token %}
                       <input
                         class="form-control form-control-lg"
                         id="url"

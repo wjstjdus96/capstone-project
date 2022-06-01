@@ -18,5 +18,6 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('tubeana/', include('tubeana.urls'))
+    path('tubeana/', include('tubeana.urls')),
+    path('getcomment/', include('getCommentFromYoutube.urls')),
 ]

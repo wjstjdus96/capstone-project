@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'tubeana.apps.TubeanaConfig',
+    'tubeana',
+    'getCommentFromYoutube',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
