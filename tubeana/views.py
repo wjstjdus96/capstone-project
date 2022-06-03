@@ -17,7 +17,7 @@ def board(request):
 
     context = {
         'videoId': videoId,
-        'title': '제목와랄라',
+        'title': 'vlog | 식욕폭발🔥 뜨끈한 쭈꾸미 샤브샤브, 퇴근하고 김치만두, 콘치즈 식빵, 제철 식재료로 향긋한 미나리무침, 미역국 레시피 (feat. 달다방)',
         'thumbnail': 'https://i.ytimg.com/vi/Trn5Q0NGMNs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCra5nbPmaGJaSD6bggx-xVj0_qDA',
         'percent': '54.36',
         'top5_text': ['toptext1\n첫번째 댓글 짱짱맨', 'text2', 'text3', 'text4', 'text5'],

@@ -1,7 +1,16 @@
 var json_top5_text = document.getElementById("top5_text").value;
 var json_low5_text = document.getElementById("low5_text").value;
-var top5_text = json_top5_text.replace(/^\[|\]$/g, "").split(", ");
-var low5_text = json_low5_text.replace(/^\[|\]$/g, "").split(", ");
+
+var top5_text = json_top5_text
+  .replace(/^\[|\]$/g, "")
+  .replace(/\'/gi, "")
+  .replace(/\\n/g, "<br/>")
+  .split(", ");
+var low5_text = json_low5_text
+  .replace(/^\[|\]$/g, "")
+  .replace(/\'/gi, "")
+  .replace(/\\n/g, "<br/>")
+  .split(", ");
 
 var commentChar = document.getElementsByName("commentChar");
 var topCmt1 = document.getElementById("topCmt1");

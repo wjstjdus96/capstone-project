@@ -56,15 +56,23 @@
                 src="{{ thumbnail }}"
                 style="
                   width: 230px;
-                  border: 1px solid rgb(255, 255, 255);
-                  border-radius: 0.6rem;
+                  /* border: 3px solid #4e73df; */
+                  border-radius: 0.7rem;
                 "
               />
               <div class="d-sm-flex align-items-center">
-                <h1 class="h3 mb-0 text-gray-800 font-weight-bold">
-                  {{title}} 의 분석결과
-                </h1>
-                <p class="ml-2 pt-2" style="font-size: 30px">&#129300;</p>
+                <h2
+                  class="d-sm-flex align-items-center h2 text-primary font-weight-bold"
+                  style="min-width: 0"
+                >
+                  [
+                  <span
+                    class="h5 mb-0 text-gray-800 font-weight-bold limit-title"
+                    >{{title}}</span
+                  >
+                  ] 의 분석결과
+                  <span class="ml-2" style="font-size: 30px">&#129300;</span>
+                </h2>
               </div>
             </div>
 
@@ -185,7 +193,7 @@
                     <div
                       id="my_favorite_latin_words"
                       style="
-                        width: 500px;
+                        width: 600px;
                         height: 250px;
                         border: 1px solid rgb(255, 255, 255);
                       "
@@ -215,7 +223,7 @@
 
     <!--데이터 받음-->
     <input type="hidden" id="percent" value="{{ percent }}" />
-    <input id="top5_text" value="'{{ top5_text }}'" />
+    <input type="hidden" id="top5_text" value="{{ top5_text }}" />
     <input type="hidden" id="low5_text" value="{{ low5_text }}" />
     <input type="hidden" id="keyword" value="{{ keyword }}" />
 
