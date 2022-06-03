@@ -1,3 +1,8 @@
+var json_top5_text = document.getElementById("top5_text").value;
+var json_low5_text = document.getElementById("low5_text").value;
+var top5_text = json_top5_text.replace(/^\[|\]$/g, "").split(", ");
+var low5_text = json_low5_text.replace(/^\[|\]$/g, "").split(", ");
+
 var commentChar = document.getElementsByName("commentChar");
 var topCmt1 = document.getElementById("topCmt1");
 var topCmt2 = document.getElementById("topCmt2");
@@ -10,20 +15,20 @@ for (i = 0; i < commentChar.length; i++) {
     console.log("functionON");
     switch (this.id) {
       case "positive":
-        topCmt1.innerHTML = "영상 최고";
-        topCmt2.innerHTML = "영상미가 좋네요!";
-        topCmt3.innerHTML = "영상이 재밌어요";
-        topCmt4.innerHTML = "ㅋㅋㅋㅋㅋ좋아요";
-        topCmt5.innerHTML = "배꼽잡고 웃었어요 하하하";
+        topCmt1.innerHTML = top5_text[0];
+        topCmt2.innerHTML = top5_text[1];
+        topCmt3.innerHTML = top5_text[2];
+        topCmt4.innerHTML = top5_text[3];
+        topCmt5.innerHTML = top5_text[4];
         console.log("긍정선택");
         break;
 
       case "negative":
-        topCmt1.innerHTML = "영상 별로";
-        topCmt2.innerHTML = "이런 것도 영상이라고 만든 건가;";
-        topCmt3.innerHTML = "유튜버 때려치세요";
-        topCmt4.innerHTML = "개노잼임";
-        topCmt5.innerHTML = "영상 본 시간이 아깝다";
+        topCmt1.innerHTML = low5_text[0];
+        topCmt2.innerHTML = low5_text[1];
+        topCmt3.innerHTML = low5_text[2];
+        topCmt4.innerHTML = low5_text[3];
+        topCmt5.innerHTML = low5_text[4];
         console.log("부정선택");
     }
   });
@@ -31,11 +36,11 @@ for (i = 0; i < commentChar.length; i++) {
 
 $(document).ready(function () {
   if ($("input[name='commentChar']:checked").val() == "positive") {
-    topCmt1.innerHTML = "영상 최고";
-    topCmt2.innerHTML = "영상미가 좋네요!";
-    topCmt3.innerHTML = "영상이 재밌어요";
-    topCmt4.innerHTML = "ㅋㅋㅋㅋㅋ좋아요";
-    topCmt5.innerHTML = "배꼽잡고 웃었어요 하하하";
+    topCmt1.innerHTML = top5_text[0];
+    topCmt2.innerHTML = top5_text[1];
+    topCmt3.innerHTML = top5_text[2];
+    topCmt4.innerHTML = top5_text[3];
+    topCmt5.innerHTML = top5_text[4];
     console.log("긍정선택");
   }
 });

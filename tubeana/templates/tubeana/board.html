@@ -50,13 +50,22 @@
           <!-- Begin Page Content -->
           <div class="container-fluid">
             <!-- Page Heading -->
-            <div
-              class="d-sm-flex align-items-center justify-content-center mb-4"
-            >
-              <h1 class="h3 mb-0 text-gray-800 font-weight-bold">
-                {{videoId}} 의 분석결과
-              </h1>
-              <p class="ml-2 pt-2" style="font-size: 30px">&#129300;</p>
+            <div class="d-sm-flex align-items-center mb-4">
+              <img
+                class="thumbnail shadow mr-4"
+                src="{{ thumbnail }}"
+                style="
+                  width: 230px;
+                  border: 1px solid rgb(255, 255, 255);
+                  border-radius: 0.6rem;
+                "
+              />
+              <div class="d-sm-flex align-items-center">
+                <h1 class="h3 mb-0 text-gray-800 font-weight-bold">
+                  {{title}} 의 분석결과
+                </h1>
+                <p class="ml-2 pt-2" style="font-size: 30px">&#129300;</p>
+              </div>
             </div>
 
             <!-- Content 1 Row -->
@@ -204,6 +213,12 @@
     </div>
     <!-- End of Page Wrapper -->
 
+    <!--데이터 받음-->
+    <input type="hidden" id="percent" value="{{ percent }}" />
+    <input id="top5_text" value="'{{ top5_text }}'" />
+    <input type="hidden" id="low5_text" value="{{ low5_text }}" />
+    <input type="hidden" id="keyword" value="{{ keyword }}" />
+
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
       <i class="fas fa-angle-up"></i>
@@ -224,10 +239,16 @@
 
     <!-- Page level custom scripts -->
     <script src="{%static 'js/graph/chart-area.js'%}"></script>
-    <script src="{%static 'js/graph/chart-pie.js'%}"></script>
+    <script
+      type="text/javascript"
+      src="{%static 'js/graph/chart-pie.js'%}"
+    ></script>
 
     <!--긍정부정 댓글 설정-->
-    <script src="{%static 'js/getTopComment.js'%}"></script>
+    <script
+      type="text/javascript"
+      src="{%static 'js/getTopComment.js'%}"
+    ></script>
 
     <!--워드클라우드 단어 설정-->
     <script
