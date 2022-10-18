@@ -7,3 +7,5 @@
 
 
 2️⃣ 결과 시각화 창
+![image](https://user-images.githubusercontent.com/77755620/196349871-0879963a-51a7-4a39-8716-9180e9d9fe11.png)
+![image](https://user-images.githubusercontent.com/77755620/196349948-5aadabca-688b-4818-a189-4687c89dfc4e.png)
